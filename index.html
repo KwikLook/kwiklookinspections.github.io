@@ -1,783 +1,237 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Kwik Look Home Inspections — clear, thorough inspections with easy-to-understand reports." />
-  <title>Kwik Look Home Inspections</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="description" content="Home inspections in San Jose, Santa Clara, and the South Bay. Engineering-informed inspections with clear reporting and same-day delivery on most homes." />
+<title>Kwik Look Home Inspections | San Jose</title>
 
-  <style>
-    :root{
-      --bg:#ffffff;
-      --text:#0f172a;
-      --muted:#475569;
-      --card:#f8fafc;
-      --border:#e2e8f0;
-      --brand:#0b3b6f;    /* primary */
-      --brand2:#0f766e;   /* secondary */
-      --shadow: 0 10px 25px rgba(2, 6, 23, .08);
-      --radius: 18px;
-      --max: 1120px;
-    }
-    *{ box-sizing:border-box; }
-    html{ scroll-behavior:smooth; }
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      color:var(--text);
-      background:var(--bg);
-      line-height:1.5;
-    }
-    a{ color:inherit; text-decoration:none; }
-    .container{ max-width:var(--max); margin:0 auto; padding:0 20px; }
+<style>
+:root{
+  --bg:#ffffff;
+  --text:#0f172a;
+  --muted:#475569;
+  --card:#f8fafc;
+  --border:#e2e8f0;
+  --brand:#0b3b6f;
+  --brand2:#0f766e;
+  --shadow: 0 10px 25px rgba(2,6,23,.08);
+  --radius:18px;
+  --max:1120px;
+}
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial;
+  color:var(--text);
+  background:var(--bg);
+  line-height:1.5;
+}
+a{text-decoration:none;color:inherit;}
+.container{max-width:var(--max);margin:0 auto;padding:0 20px;}
+section{padding:64px 0;}
+.grid{display:grid;gap:18px;}
+.three{grid-template-columns:repeat(3,1fr);}
+.two{grid-template-columns:repeat(2,1fr);}
+.hero-grid{grid-template-columns:1.2fr .8fr;align-items:center;}
 
-    /* Top bar */
-    .topbar{
-      position:sticky; top:0; z-index:50;
-      background:rgba(255,255,255,.92);
-      backdrop-filter:saturate(180%) blur(10px);
-      border-bottom:1px solid var(--border);
-    }
-    .nav{
-      display:flex; align-items:center; justify-content:space-between;
-      padding:14px 0;
-      gap:16px;
-    }
-    .brand{
-      display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.2px;
-    }
-    .logo-dot{
-      width:34px; height:34px; border-radius:10px;
-      background:linear-gradient(135deg, var(--brand), var(--brand2));
-      box-shadow: var(--shadow);
-    }
-    .navlinks{
-      display:none;
-      gap:16px; align-items:center;
-      color:var(--muted);
-      font-weight:600;
-      font-size:14px;
-    }
-    .navlinks a{ padding:8px 10px; border-radius:10px; }
-    .navlinks a:hover{ background:var(--card); color:var(--text); }
-    .actions{ display:flex; gap:10px; align-items:center; }
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      gap:10px;
-      padding:11px 14px;
-      border-radius:12px;
-      border:1px solid var(--border);
-      background:#fff;
-      color:var(--text);
-      font-weight:700;
-      font-size:14px;
-      cursor:pointer;
-      transition:.15s transform, .15s background, .15s border-color;
-      white-space:nowrap;
-    }
-    .btn:hover{ transform:translateY(-1px); border-color:#cbd5e1; }
-    .btn.primary{
-      background:var(--brand);
-      color:#fff;
-      border-color:transparent;
-    }
-    .btn.primary:hover{ background:#083057; }
-    .btn.secondary{
-      background:rgba(15,118,110,.08);
-      border-color:rgba(15,118,110,.25);
-      color:var(--brand2);
-    }
-    .btn.secondary:hover{
-      background:rgba(15,118,110,.12);
-      border-color:rgba(15,118,110,.35);
-    }
-    .menu-btn{ display:inline-flex; }
-    .mobile-menu{
-      display:none;
-      border-top:1px solid var(--border);
-      padding:10px 0 14px;
-    }
-    .mobile-menu a{
-      display:block;
-      padding:10px 12px;
-      border-radius:12px;
-      color:var(--muted);
-      font-weight:700;
-    }
-    .mobile-menu a:hover{ background:var(--card); color:var(--text); }
+.topbar{
+  position:sticky;top:0;z-index:50;
+  background:#fff;border-bottom:1px solid var(--border);
+}
+.nav{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 0;
+}
+.brand{font-weight:800;}
+.navlinks{display:flex;gap:16px;color:var(--muted);font-weight:600;}
+.btn{
+  padding:10px 14px;border-radius:12px;border:1px solid var(--border);
+  font-weight:700;cursor:pointer;
+}
+.btn.primary{background:var(--brand);color:#fff;border:none;}
+.btn.secondary{background:rgba(15,118,110,.08);color:var(--brand2);}
 
-    /* Sections */
-    section{ padding:64px 0; }
-    .hero{
-      padding:70px 0 54px;
-      background:
-        radial-gradient(1200px 500px at 20% -10%, rgba(11,59,111,.12), transparent 65%),
-        radial-gradient(900px 420px at 95% 10%, rgba(15,118,110,.12), transparent 55%);
-    }
-    .grid{
-      display:grid;
-      gap:18px;
-    }
-    .hero-grid{
-      grid-template-columns: 1.25fr .85fr;
-      align-items:center;
-    }
-    .kicker{
-      display:inline-flex;
-      gap:10px; align-items:center;
-      background:rgba(11,59,111,.08);
-      border:1px solid rgba(11,59,111,.15);
-      color:var(--brand);
-      padding:8px 12px;
-      border-radius:999px;
-      font-weight:800;
-      font-size:13px;
-      width:fit-content;
-    }
-    h1{
-      font-size:44px;
-      line-height:1.08;
-      margin:14px 0 12px;
-      letter-spacing:-.5px;
-    }
-    .lead{
-      color:var(--muted);
-      font-size:17px;
-      margin:0 0 18px;
-      max-width:60ch;
-    }
-    .bullets{
-      display:grid; gap:10px;
-      padding:0; margin:0 0 22px;
-      list-style:none;
-      color:var(--text);
-      font-weight:650;
-    }
-    .bullets li{
-      display:flex; gap:10px; align-items:flex-start;
-    }
-    .check{
-      width:20px; height:20px; margin-top:2px;
-      border-radius:6px;
-      background:rgba(15,118,110,.12);
-      border:1px solid rgba(15,118,110,.25);
-      display:flex; align-items:center; justify-content:center;
-      color:var(--brand2);
-      flex:0 0 auto;
-      font-weight:900;
-      font-size:14px;
-    }
-    .trust{
-      display:flex; flex-wrap:wrap; gap:10px;
-      margin-top:16px;
-      color:var(--muted);
-      font-weight:700;
-      font-size:13px;
-    }
-    .pill{
-      padding:8px 10px;
-      border-radius:999px;
-      border:1px solid var(--border);
-      background:#fff;
-    }
+.hero{
+  background:
+  radial-gradient(1200px 500px at 20% -10%, rgba(11,59,111,.12), transparent 65%),
+  radial-gradient(900px 420px at 95% 10%, rgba(15,118,110,.12), transparent 55%);
+}
+.kicker{
+  display:inline-block;
+  background:rgba(11,59,111,.08);
+  border:1px solid rgba(11,59,111,.15);
+  padding:6px 12px;
+  border-radius:999px;
+  font-weight:800;
+  font-size:13px;
+  color:var(--brand);
+}
+h1{font-size:42px;line-height:1.1;margin:14px 0;}
+.lead{color:var(--muted);max-width:60ch;}
+.bullets{list-style:none;padding:0;margin:18px 0;font-weight:600;}
+.bullets li{margin-bottom:8px;}
 
-    .card{
-      background:var(--card);
-      border:1px solid var(--border);
-      border-radius:var(--radius);
-      padding:18px;
-      box-shadow: 0 1px 0 rgba(2,6,23,.03);
-    }
-    .hero-side .card{
-      background:#fff;
-      box-shadow: var(--shadow);
-    }
-    .small{
-      color:var(--muted);
-      font-size:13px;
-      margin:0;
-    }
-    .side-title{
-      font-weight:900;
-      margin:0 0 10px;
-      letter-spacing:-.2px;
-    }
+.card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:20px;
+  box-shadow:var(--shadow);
+}
+.section-title{font-size:28px;margin-bottom:10px;}
+.section-sub{color:var(--muted);margin-bottom:20px;}
+.small{font-size:13px;color:var(--muted);}
 
-    .section-title{
-      font-size:28px;
-      letter-spacing:-.35px;
-      margin:0 0 10px;
-    }
-    .section-sub{
-      margin:0 0 18px;
-      color:var(--muted);
-      max-width:70ch;
-    }
+footer{
+  border-top:1px solid var(--border);
+  padding:24px 0;
+  font-size:13px;
+  color:var(--muted);
+}
 
-    /* Cards grids */
-    .three{ grid-template-columns:repeat(3, 1fr); }
-    .two{ grid-template-columns:repeat(2, 1fr); }
-    .four{ grid-template-columns:repeat(4, 1fr); }
-
-    .icon{
-      width:40px; height:40px; border-radius:14px;
-      background:linear-gradient(135deg, rgba(11,59,111,.12), rgba(15,118,110,.12));
-      border:1px solid rgba(2,6,23,.06);
-      display:flex; align-items:center; justify-content:center;
-      font-weight:900;
-    }
-    .card h3{ margin:12px 0 6px; letter-spacing:-.2px; }
-    .card p{ margin:0; color:var(--muted); }
-
-    /* Pricing */
-    .pricing .card{ background:#fff; box-shadow: var(--shadow); }
-    .tag{
-      display:inline-flex; align-items:center;
-      padding:6px 10px;
-      border-radius:999px;
-      font-size:12px;
-      font-weight:900;
-      border:1px solid var(--border);
-      color:var(--muted);
-      background:var(--card);
-      width:fit-content;
-    }
-    .price{
-      font-size:34px;
-      font-weight:950;
-      margin:10px 0 6px;
-      letter-spacing:-.5px;
-    }
-    .price span{ font-size:14px; color:var(--muted); font-weight:800; }
-    .list{ margin:12px 0 0; padding-left:18px; color:var(--muted); }
-    .list li{ margin:8px 0; }
-
-    /* FAQ */
-    details{
-      background:#fff;
-      border:1px solid var(--border);
-      border-radius:14px;
-      padding:14px 14px;
-    }
-    details summary{
-      cursor:pointer;
-      font-weight:900;
-      list-style:none;
-      display:flex; align-items:center; justify-content:space-between;
-      gap:12px;
-    }
-    details summary::-webkit-details-marker{ display:none; }
-    details p{ margin:10px 0 0; color:var(--muted); }
-
-    /* Form */
-    form{ display:grid; gap:12px; }
-    .field{ display:grid; gap:6px; }
-    label{ font-weight:800; font-size:13px; color:var(--text); }
-    input, textarea, select{
-      width:100%;
-      border:1px solid var(--border);
-      border-radius:14px;
-      padding:12px 12px;
-      font:inherit;
-      background:#fff;
-      outline:none;
-    }
-    input:focus, textarea:focus, select:focus{
-      border-color: rgba(11,59,111,.45);
-      box-shadow: 0 0 0 3px rgba(11,59,111,.14);
-    }
-    textarea{ min-height:110px; resize:vertical; }
-    .form-grid{ grid-template-columns:repeat(2, 1fr); }
-
-    footer{
-      border-top:1px solid var(--border);
-      padding:22px 0;
-      color:var(--muted);
-      font-size:13px;
-    }
-    .footer-row{
-      display:flex; justify-content:space-between; align-items:flex-start;
-      gap:14px; flex-wrap:wrap;
-    }
-
-    /* Responsive */
-    @media (max-width: 980px){
-      .hero-grid{ grid-template-columns:1fr; }
-      h1{ font-size:38px; }
-      .three{ grid-template-columns:1fr; }
-      .four{ grid-template-columns:1fr; }
-      .two{ grid-template-columns:1fr; }
-      .form-grid{ grid-template-columns:1fr; }
-    }
-    @media (min-width: 880px){
-      .navlinks{ display:flex; }
-      .menu-btn{ display:none; }
-      .mobile-menu{ display:none !important; }
-    }
-  </style>
+@media(max-width:980px){
+  .hero-grid,.three,.two{grid-template-columns:1fr;}
+}
+</style>
 </head>
 
 <body>
 
-  <!-- Top Navigation -->
-  <header class="topbar">
-    <div class="container">
-      <div class="nav">
-        <a class="brand" href="#top">
-          <span class="logo-dot" aria-hidden="true"></span>
-          <span>Kwik Look</span>
-        </a>
+<header class="topbar">
+<div class="container nav">
+<div class="brand">Kwik Look</div>
+<nav class="navlinks">
+<a href="#services">Services</a>
+<a href="#why">Why Choose</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+<a class="btn primary" href="#contact">Book Now</a>
+</div>
+</header>
 
-        <nav class="navlinks" aria-label="Primary">
-          <a href="#services">Services</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#areas">Areas</a>
-          <a href="#faq">FAQs</a>
-          <a href="#contact">Contact</a>
-        </nav>
+<main>
 
-        <div class="actions">
-          <!-- Replace phone number -->
-          <a class="btn" href="tel:+14085551234" aria-label="Call or text">Call/Text</a>
-          <a class="btn primary" href="#contact">Book Now</a>
-          <button class="btn menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobileMenu">
-            Menu
-          </button>
-        </div>
-      </div>
+<!-- HERO -->
+<section class="hero">
+<div class="container">
+<div class="grid hero-grid">
+<div>
+<div class="kicker">San Jose • Santa Clara • South Bay</div>
+<h1>Home Inspections Informed by Structural Engineering Insight.</h1>
+<p class="lead">
+Thorough, objective inspections with a deeper understanding of how homes are built and how systems perform over time.
+Clear priorities. Straight answers. No alarmist language.
+</p>
+<ul class="bullets">
+<li>✓ Architectural Engineering background</li>
+<li>✓ Photo-rich digital reports delivered same day on most homes</li>
+<li>✓ Practical priorities — safety, major, maintenance</li>
+</ul>
+<a class="btn primary" href="#contact">Request Booking</a>
+</div>
 
-      <div class="mobile-menu" id="mobileMenu">
-        <a href="#services">Services</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#areas">Areas</a>
-        <a href="#faq">FAQs</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </div>
-  </header>
+<div class="card">
+<strong>Fast Quote</strong>
+<p class="small">Text your address and square footage for transparent pricing and availability.</p>
+<p><strong>Call/Text:</strong> (408) 555-1234</p>
+</div>
+</div>
+</div>
+</section>
 
-  <!-- Hero -->
-  <main id="top">
-    <section class="hero">
-      <div class="container">
-        <div class="grid hero-grid">
-          <div>
-            <div class="kicker">Home Inspections • Clear Reports • Practical Next Steps</div>
-            <h1>Home Inspections That Give You Clarity — Fast.</h1>
-            <p class="lead">
-              Thorough inspections, straightforward explanations, and a photo-rich report you can actually use.
-              Same-day report delivery on most inspections.
-            </p>
+<!-- SERVICES -->
+<section id="services">
+<div class="container">
+<h2 class="section-title">Services</h2>
+<p class="section-sub">Comprehensive visual inspections of accessible systems and components.</p>
 
-            <ul class="bullets">
-              <li><span class="check">✓</span><span>Clear, prioritized findings (what matters most first)</span></li>
-              <li><span class="check">✓</span><span>Friendly on-site walkthrough + Q&amp;A</span></li>
-              <li><span class="check">✓</span><span>Flexible scheduling, including weekends</span></li>
-            </ul>
+<div class="grid three">
+<div class="card">
+<h3>Home Inspection</h3>
+<p>Roof, structure, attic, plumbing, electrical, HVAC, interior, exterior, and more.</p>
+</div>
+<div class="card">
+<h3>Moisture Screening</h3>
+<p>Moisture meter readings in common risk areas.</p>
+</div>
+<div class="card">
+<h3>Re-Inspection</h3>
+<p>Limited follow-up inspections to verify repairs.</p>
+</div>
+</div>
+</div>
+</section>
 
-            <div class="actions" style="gap:12px; flex-wrap:wrap;">
-              <a class="btn primary" href="#contact">Book an Inspection</a>
-              <a class="btn secondary" href="tel:+14085551234">Call/Text: (408) 555-1234</a>
-            </div>
+<!-- WHY CHOOSE -->
+<section id="why">
+<div class="container">
+<h2 class="section-title">Why Choose Kwik Look</h2>
+<p class="section-sub">
+A sharper lens on home performance — without turning your inspection into an engineering report.
+</p>
 
-            <div class="trust">
-              <span class="pill">Certified / Insured</span>
-              <span class="pill">Serving: Santa Clara • San Jose • Nearby</span>
-              <span class="pill">Reports: digital + photos</span>
-            </div>
-          </div>
+<div class="grid three">
+<div class="card">
+<h3>Structural Awareness</h3>
+<p>Background in architectural/structural engineering provides deeper insight into framing, settlement patterns, and system performance.</p>
+</div>
+<div class="card">
+<h3>Bay Area Focus</h3>
+<p>Familiar with local housing stock, seismic considerations, and common South Bay construction details.</p>
+</div>
+<div class="card">
+<h3>Clear Communication</h3>
+<p>No scare tactics. No inflated language. Just clear findings and practical next steps.</p>
+</div>
+</div>
 
-          <div class="hero-side">
-            <div class="card">
-              <p class="side-title">Get a quick quote in 60 seconds</p>
-              <p class="small">Text your address + approximate square footage. I’ll reply with availability and a firm quote.</p>
-              <div style="height:12px;"></div>
-              <a class="btn primary" href="#contact" style="width:100%;">Request Booking</a>
-              <div style="height:10px;"></div>
-              <a class="btn" href="sms:+14085551234?&body=Hi%20Kwik%20Look%20—%20I%E2%80%99d%20like%20a%20quote.%20Address%3A%20____%20Sq%20ft%3A%20____%20Preferred%20date%2Ftime%3A%20____" style="width:100%;">
-                Text for Quote
-              </a>
-              <div style="height:14px;"></div>
-              <p class="small"><strong>Typical inspection time:</strong> 2–4 hours depending on home size &amp; complexity.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+<p class="small" style="margin-top:20px;">
+Home inspections are non-invasive visual evaluations and are not structural engineering services or code compliance inspections.
+</p>
+</div>
+</section>
 
-    <!-- What You Get -->
-    <section>
-      <div class="container">
-        <h2 class="section-title">What You Get</h2>
-        <p class="section-sub">A professional inspection experience that’s clear, calm, and actionable.</p>
+<!-- ABOUT -->
+<section id="about">
+<div class="container">
+<div class="card">
+<h2 class="section-title">About Jerome</h2>
+<p>
+Hi, I’m Jerome. I bring a background in Architectural Engineering and a strong understanding of building systems to every inspection.
 
-        <div class="grid three">
-          <div class="card">
-            <div class="icon">📄</div>
-            <h3>Clear Report</h3>
-            <p>Photo-rich findings, summaries, and practical recommendations—no confusion, no filler.</p>
-          </div>
-          <div class="card">
-            <div class="icon">🧭</div>
-            <h3>On-Site Walkthrough</h3>
-            <p>I’ll show you major items, explain priorities, and answer questions on the spot.</p>
-          </div>
-          <div class="card">
-            <div class="icon">🛡️</div>
-            <h3>Peace of Mind</h3>
-            <p>Know what you’re buying (or selling) and make decisions with confidence.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+My focus is clarity — not fear. I evaluate accessible components, explain what matters most,
+and help you understand condition, risk, and next steps in plain language.
 
-    <!-- Services -->
-    <section id="services">
-      <div class="container">
-        <h2 class="section-title">Services</h2>
-        <p class="section-sub">Choose what you need. Keep it simple. Add-ons available.</p>
+Home inspections are visual evaluations — not engineering reports —
+but my technical background allows me to recognize patterns and conditions that deserve attention.
+</p>
+</div>
+</div>
+</section>
 
-        <div class="grid three">
-          <div class="card">
-            <div class="icon">🏠</div>
-            <h3>Home Inspection</h3>
-            <p>Visual inspection of accessible systems: roof, exterior, interior, attic, plumbing, electrical, HVAC, and more.</p>
-          </div>
-          <div class="card">
-            <div class="icon">💧</div>
-            <h3>Moisture Screening (Add-on)</h3>
-            <p>Moisture meter readings in common risk areas to identify potential intrusion concerns.</p>
-          </div>
-          <div class="card">
-            <div class="icon">🏊</div>
-            <h3>Pool / Spa (Add-on)</h3>
-            <p>Visual inspection of accessible components, safety items, and general condition.</p>
-          </div>
-        </div>
+<!-- CONTACT -->
+<section id="contact">
+<div class="container">
+<h2 class="section-title">Request Booking</h2>
+<p class="section-sub">Call or text for availability and pricing.</p>
+<div class="card">
+<p><strong>Phone/Text:</strong> (408) 555-1234</p>
+<p><strong>Email:</strong> hello@yourdomain.com</p>
+<p><strong>Service Area:</strong> San Jose, Santa Clara, Sunnyvale, Mountain View, Cupertino and surrounding areas.</p>
+</div>
+</div>
+</section>
 
-        <div style="height:18px;"></div>
+<footer>
+<div class="container">
+Engineering-informed inspections for confident Bay Area home decisions.
+<br><br>
+© 2026 Kwik Look Home Inspections
+</div>
+</footer>
 
-        <div class="grid two">
-          <div class="card">
-            <div class="icon">🔎</div>
-            <h3>Re-Inspection</h3>
-            <p>Limited-scope follow-up to verify repairs or re-check flagged areas (as accessible).</p>
-          </div>
-          <div class="card">
-            <div class="icon">🧰</div>
-            <h3>Partner Add-ons</h3>
-            <p>Sewer scope, specialized testing, or contractor evaluation coordination upon request.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Pricing -->
-    <section id="pricing" class="pricing">
-      <div class="container">
-        <h2 class="section-title">Simple Pricing</h2>
-        <p class="section-sub">Final price depends on size, age, and access. Get a firm quote fast by text.</p>
-
-        <div class="grid three">
-          <div class="card">
-            <div class="tag">Most common</div>
-            <h3 style="margin:10px 0 0;">Essential</h3>
-            <div class="price">$___ <span>starting</span></div>
-            <ul class="list">
-              <li>Full home inspection</li>
-              <li>Digital report with photos</li>
-              <li>On-site walkthrough + Q&amp;A</li>
-            </ul>
-            <div style="height:14px;"></div>
-            <a class="btn primary" href="#contact" style="width:100%;">Book Essential</a>
-          </div>
-
-          <div class="card" style="border:1px solid rgba(15,118,110,.45);">
-            <div class="tag" style="color:var(--brand2); border-color:rgba(15,118,110,.35); background:rgba(15,118,110,.08);">Best value</div>
-            <h3 style="margin:10px 0 0;">Plus</h3>
-            <div class="price">$___ <span>starting</span></div>
-            <ul class="list">
-              <li>Everything in Essential</li>
-              <li>Moisture screening add-on</li>
-              <li>Extra time for questions</li>
-            </ul>
-            <div style="height:14px;"></div>
-            <a class="btn primary" href="#contact" style="width:100%;">Book Plus</a>
-          </div>
-
-          <div class="card">
-            <div class="tag">Large / complex homes</div>
-            <h3 style="margin:10px 0 0;">Premium</h3>
-            <div class="price">$___ <span>starting</span></div>
-            <ul class="list">
-              <li>Everything in Plus</li>
-              <li>Expanded scope/time window</li>
-              <li>Special considerations as needed</li>
-            </ul>
-            <div style="height:14px;"></div>
-            <a class="btn primary" href="#contact" style="width:100%;">Book Premium</a>
-          </div>
-        </div>
-
-        <div style="height:14px;"></div>
-        <p class="small">
-          <strong>Note:</strong> Quotes are based on square footage, age, and accessibility. Text for a firm quote in 60 seconds.
-        </p>
-      </div>
-    </section>
-
-    <!-- How it Works -->
-    <section>
-      <div class="container">
-        <h2 class="section-title">How It Works</h2>
-        <p class="section-sub">Three steps. No hassle.</p>
-
-        <div class="grid three">
-          <div class="card">
-            <div class="icon">📅</div>
-            <h3>Request a Time</h3>
-            <p>Text/call or use the form. I’ll confirm availability and send a firm quote.</p>
-          </div>
-          <div class="card">
-            <div class="icon">🧪</div>
-            <h3>We Inspect</h3>
-            <p>Thorough inspection of accessible areas, with clear explanations as we go.</p>
-          </div>
-          <div class="card">
-            <div class="icon">📲</div>
-            <h3>Get Your Report</h3>
-            <p>Same-day delivery on most inspections, including photos and priorities.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Service Areas -->
-    <section id="areas">
-      <div class="container">
-        <h2 class="section-title">Service Area</h2>
-        <p class="section-sub">Serving the South Bay and surrounding communities.</p>
-
-        <div class="grid two">
-          <div class="card">
-            <h3 style="margin-top:0;">Cities (examples)</h3>
-            <p>Santa Clara • San Jose • Sunnyvale • Mountain View • Cupertino • Milpitas • Campbell • Los Gatos</p>
-            <div style="height:12px;"></div>
-            <a class="btn" href="#contact">Ask if I cover your area</a>
-          </div>
-          <div class="card">
-            <h3 style="margin-top:0;">Hours</h3>
-            <p><strong>Mon–Sat:</strong> 8:00am – 6:00pm<br><strong>Sun:</strong> Limited availability</p>
-            <p class="small" style="margin-top:10px;">Weekend slots fill fast — booking early is best.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section>
-      <div class="container">
-        <div class="grid two">
-          <div class="card">
-            <h2 class="section-title" style="margin:0 0 10px;">About</h2>
-            <p class="section-sub" style="margin:0;">
-              Hi, I’m <strong>Jerome</strong>. I help buyers and homeowners understand property conditions with calm, clear reporting.
-              My goal is simple: give you the facts, prioritize what matters, and help you make a confident decision.
-            </p>
-            <div style="height:12px;"></div>
-            <p class="small"><strong>Certifications/affiliations:</strong> (Add yours here — InterNACHI, ICA, license # if applicable)</p>
-          </div>
-
-          <div class="card">
-            <h3 style="margin-top:0;">What clients appreciate</h3>
-            <ul class="list">
-              <li>Clear communication and no scare tactics</li>
-              <li>Practical priorities (what to fix now vs later)</li>
-              <li>Respect for your time and schedule</li>
-            </ul>
-            <p class="small" style="margin-top:12px;">Once you have real reviews, add them here (Google / Yelp / etc.).</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq">
-      <div class="container">
-        <h2 class="section-title">FAQs</h2>
-        <p class="section-sub">Common questions — quick answers.</p>
-
-        <div class="grid two">
-          <details>
-            <summary>How long does an inspection take? <span>+</span></summary>
-            <p>Most inspections take 2–4 hours depending on size, age, and accessibility.</p>
-          </details>
-          <details>
-            <summary>When do I receive the report? <span>+</span></summary>
-            <p>Same-day on most inspections. If a home is large/complex, delivery may be next day.</p>
-          </details>
-          <details>
-            <summary>Do I need to attend the inspection? <span>+</span></summary>
-            <p>It’s optional, but recommended. The best time to join is the last 20–30 minutes for a walkthrough.</p>
-          </details>
-          <details>
-            <summary>What do you inspect (and not inspect)? <span>+</span></summary>
-            <p>I inspect accessible, visible areas and systems. I do not perform destructive testing or code compliance verification.</p>
-          </details>
-          <details>
-            <summary>Do you offer mold testing? <span>+</span></summary>
-            <p>I can offer moisture screening and recommend next steps. Lab testing can be coordinated if desired.</p>
-          </details>
-          <details>
-            <summary>What’s your cancellation policy? <span>+</span></summary>
-            <p>Example: No fee with 24+ hours notice. Same-day cancellations may have a charge. (Customize this.)</p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact">
-      <div class="container">
-        <h2 class="section-title">Request Booking</h2>
-        <p class="section-sub">Fill this out and I’ll confirm availability + a firm quote.</p>
-
-        <div class="grid two">
-          <div class="card">
-            <!--
-              This form uses mailto: so it works without a server.
-              For a more professional setup, connect this form to:
-              - Netlify Forms, Formspree, or your website builder’s form tool.
-            -->
-            <form id="bookingForm">
-              <div class="grid form-grid">
-                <div class="field">
-                  <label for="name">Name</label>
-                  <input id="name" name="name" placeholder="Your name" required />
-                </div>
-                <div class="field">
-                  <label for="phone">Phone</label>
-                  <input id="phone" name="phone" placeholder="(###) ###-####" required />
-                </div>
-              </div>
-
-              <div class="field">
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email" placeholder="you@email.com" required />
-              </div>
-
-              <div class="field">
-                <label for="address">Property Address</label>
-                <input id="address" name="address" placeholder="123 Main St, City, CA" required />
-              </div>
-
-              <div class="grid form-grid">
-                <div class="field">
-                  <label for="sqft">Approx. Sq Ft (optional)</label>
-                  <input id="sqft" name="sqft" placeholder="e.g., 1600" />
-                </div>
-                <div class="field">
-                  <label for="date">Preferred Date/Time</label>
-                  <input id="date" name="date" placeholder="e.g., Sat morning" />
-                </div>
-              </div>
-
-              <div class="field">
-                <label for="addons">Add-ons (optional)</label>
-                <select id="addons" name="addons">
-                  <option value="none">None</option>
-                  <option value="moisture">Moisture Screening</option>
-                  <option value="pool">Pool/Spa</option>
-                  <option value="reinspection">Re-Inspection</option>
-                  <option value="unsure">Not sure yet</option>
-                </select>
-              </div>
-
-              <div class="field">
-                <label for="notes">Notes (optional)</label>
-                <textarea id="notes" name="notes" placeholder="Anything I should know? Gate code, occupancy, concerns, etc."></textarea>
-              </div>
-
-              <button class="btn primary" type="submit">Send Request</button>
-              <p class="small">Prefer text? <a href="sms:+14085551234?&body=Hi%20Kwik%20Look%20—%20I%E2%80%99d%20like%20to%20book.%20Address%3A%20____%20Preferred%20date%2Ftime%3A%20____" style="text-decoration:underline;">Tap here to text</a>.</p>
-            </form>
-          </div>
-
-          <div class="card">
-            <h3 style="margin-top:0;">Direct Contact</h3>
-            <p><strong>Phone/Text:</strong> <a href="tel:+14085551234" style="text-decoration:underline;">(408) 555-1234</a></p>
-            <p><strong>Email:</strong> <a href="mailto:hello@yourdomain.com" style="text-decoration:underline;">hello@yourdomain.com</a></p>
-            <p><strong>Service Area:</strong> South Bay + surrounding areas</p>
-            <div style="height:10px;"></div>
-            <div class="card" style="background:var(--card); box-shadow:none;">
-              <p class="small" style="margin:0;">
-                <strong>Tip:</strong> Replace placeholders (phone, email, pricing, cities). Then publish.
-                If you want form submissions without email popups, use Netlify Forms or Formspree.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <div class="container">
-        <div class="footer-row">
-          <div>
-            <div class="brand" style="gap:10px;">
-              <span class="logo-dot" aria-hidden="true"></span>
-              <strong>Kwik Look Home Inspections</strong>
-            </div>
-            <p style="margin:8px 0 0;">Clear inspections. Honest priorities. Better decisions.</p>
-          </div>
-          <div>
-            <p style="margin:0;"><strong>License/Cert #:</strong> (add if applicable)</p>
-            <p style="margin:6px 0 0;">© <span id="year"></span> Kwik Look. All rights reserved.</p>
-          </div>
-        </div>
-      </div>
-    </footer>
-  </main>
-
-  <script>
-    // Mobile menu toggle
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-
-    menuBtn?.addEventListener('click', () => {
-      const open = mobileMenu.style.display === 'block';
-      mobileMenu.style.display = open ? 'none' : 'block';
-      menuBtn.setAttribute('aria-expanded', String(!open));
-    });
-
-    // Mailto form submission (no backend required)
-    const form = document.getElementById('bookingForm');
-    form?.addEventListener('submit', (e) => {
-      e.preventDefault();
-
-      const data = new FormData(form);
-      const lines = [];
-      for (const [k, v] of data.entries()) lines.push(`${k}: ${v}`);
-
-      const subject = encodeURIComponent('Kwik Look — Booking Request');
-      const body = encodeURIComponent(lines.join('\n'));
-
-      // Replace this with your real email
-      const to = 'hello@yourdomain.com';
-
-      window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
-    });
-
-    // Footer year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Close mobile menu after click
-    document.querySelectorAll('#mobileMenu a').forEach(a => {
-      a.addEventListener('click', () => {
-        mobileMenu.style.display = 'none';
-        menuBtn.setAttribute('aria-expanded', 'false');
-      });
-    });
-  </script>
+</main>
 </body>
 </html>
