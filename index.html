@@ -1,237 +1,234 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<meta name="description" content="Home inspections in San Jose, Santa Clara, and the South Bay. Engineering-informed inspections with clear reporting and same-day delivery on most homes." />
-<title>Kwik Look Home Inspections | San Jose</title>
-
-<style>
-:root{
-  --bg:#ffffff;
-  --text:#0f172a;
-  --muted:#475569;
-  --card:#f8fafc;
-  --border:#e2e8f0;
-  --brand:#0b3b6f;
-  --brand2:#0f766e;
-  --shadow: 0 10px 25px rgba(2,6,23,.08);
-  --radius:18px;
-  --max:1120px;
-}
-*{box-sizing:border-box;}
-body{
-  margin:0;
-  font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial;
-  color:var(--text);
-  background:var(--bg);
-  line-height:1.5;
-}
-a{text-decoration:none;color:inherit;}
-.container{max-width:var(--max);margin:0 auto;padding:0 20px;}
-section{padding:64px 0;}
-.grid{display:grid;gap:18px;}
-.three{grid-template-columns:repeat(3,1fr);}
-.two{grid-template-columns:repeat(2,1fr);}
-.hero-grid{grid-template-columns:1.2fr .8fr;align-items:center;}
-
-.topbar{
-  position:sticky;top:0;z-index:50;
-  background:#fff;border-bottom:1px solid var(--border);
-}
-.nav{
-  display:flex;align-items:center;justify-content:space-between;
-  padding:14px 0;
-}
-.brand{font-weight:800;}
-.navlinks{display:flex;gap:16px;color:var(--muted);font-weight:600;}
-.btn{
-  padding:10px 14px;border-radius:12px;border:1px solid var(--border);
-  font-weight:700;cursor:pointer;
-}
-.btn.primary{background:var(--brand);color:#fff;border:none;}
-.btn.secondary{background:rgba(15,118,110,.08);color:var(--brand2);}
-
-.hero{
-  background:
-  radial-gradient(1200px 500px at 20% -10%, rgba(11,59,111,.12), transparent 65%),
-  radial-gradient(900px 420px at 95% 10%, rgba(15,118,110,.12), transparent 55%);
-}
-.kicker{
-  display:inline-block;
-  background:rgba(11,59,111,.08);
-  border:1px solid rgba(11,59,111,.15);
-  padding:6px 12px;
-  border-radius:999px;
-  font-weight:800;
-  font-size:13px;
-  color:var(--brand);
-}
-h1{font-size:42px;line-height:1.1;margin:14px 0;}
-.lead{color:var(--muted);max-width:60ch;}
-.bullets{list-style:none;padding:0;margin:18px 0;font-weight:600;}
-.bullets li{margin-bottom:8px;}
-
-.card{
-  background:#fff;
-  border:1px solid var(--border);
-  border-radius:var(--radius);
-  padding:20px;
-  box-shadow:var(--shadow);
-}
-.section-title{font-size:28px;margin-bottom:10px;}
-.section-sub{color:var(--muted);margin-bottom:20px;}
-.small{font-size:13px;color:var(--muted);}
-
-footer{
-  border-top:1px solid var(--border);
-  padding:24px 0;
-  font-size:13px;
-  color:var(--muted);
-}
-
-@media(max-width:980px){
-  .hero-grid,.three,.two{grid-template-columns:1fr;}
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home Inspections in the San Francisco Bay Area | Kwik Look Inspections</title>
+  <meta name="description" content="Kwik Look Inspections provides thorough residential home inspections across the San Francisco Bay Area, with photo-rich digital reports delivered within 24 hours in most cases." />
+  <meta name="author" content="Kwik Look Inspections" />
+  <meta property="og:title" content="Kwik Look Inspections | Bay Area Home Inspections" />
+  <meta property="og:description" content="Professional property inspections for buyers, homeowners, and real estate professionals across the San Francisco Bay Area." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/kwiklook-logo.jpg" />
+  <meta property="og:url" content="https://kwiklookinspections.com/" />
+  <link rel="canonical" href="https://kwiklookinspections.com/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<header class="topbar">
-<div class="container nav">
-<div class="brand">Kwik Look</div>
-<nav class="navlinks">
-<a href="#services">Services</a>
-<a href="#why">Why Choose</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
-</nav>
-<a class="btn primary" href="#contact">Book Now</a>
-</div>
-</header>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <p>Serving San Jose, San Francisco, Oakland, Fremont, Santa Clara, Sunnyvale & surrounding Bay Area communities</p>
+      <a href="tel:+18315315665">Call (831) 531-5665</a>
+    </div>
+  </div>
 
-<main>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Kwik Look Inspections home">
+        <img src="assets/kwiklook-logo.jpg" alt="Kwik Look Inspections logo" />
+      </a>
 
-<!-- HERO -->
-<section class="hero">
-<div class="container">
-<div class="grid hero-grid">
-<div>
-<div class="kicker">San Jose • Santa Clara • South Bay</div>
-<h1>Home Inspections Informed by Structural Engineering Insight.</h1>
-<p class="lead">
-Thorough, objective inspections with a deeper understanding of how homes are built and how systems perform over time.
-Clear priorities. Straight answers. No alarmist language.
-</p>
-<ul class="bullets">
-<li>✓ Architectural Engineering background</li>
-<li>✓ Photo-rich digital reports delivered same day on most homes</li>
-<li>✓ Practical priorities — safety, major, maintenance</li>
-</ul>
-<a class="btn primary" href="#contact">Request Booking</a>
-</div>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
 
-<div class="card">
-<strong>Fast Quote</strong>
-<p class="small">Text your address and square footage for transparent pricing and availability.</p>
-<p><strong>Call/Text:</strong> (408) 555-1234</p>
-</div>
-</div>
-</div>
-</section>
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a class="btn btn-primary nav-cta" href="contact.html">Schedule Inspection</a>
+      </nav>
+    </div>
+  </header>
 
-<!-- SERVICES -->
-<section id="services">
-<div class="container">
-<h2 class="section-title">Services</h2>
-<p class="section-sub">Comprehensive visual inspections of accessible systems and components.</p>
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Professional Residential Inspections</p>
+          <h1>Clear, Thorough Home Inspections for Confident Bay Area Decisions</h1>
+          <p class="hero-lead">
+            Kwik Look Inspections helps buyers, homeowners, and real estate professionals understand the condition of a property before making important financial decisions. Expect a detailed visual inspection, practical explanations, and a photo-rich digital report delivered within 24 hours in most cases.
+          </p>
 
-<div class="grid three">
-<div class="card">
-<h3>Home Inspection</h3>
-<p>Roof, structure, attic, plumbing, electrical, HVAC, interior, exterior, and more.</p>
-</div>
-<div class="card">
-<h3>Moisture Screening</h3>
-<p>Moisture meter readings in common risk areas.</p>
-</div>
-<div class="card">
-<h3>Re-Inspection</h3>
-<p>Limited follow-up inspections to verify repairs.</p>
-</div>
-</div>
-</div>
-</section>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="contact.html">Request an Inspection</a>
+            <a class="btn btn-secondary" href="tel:+18315315665">Call Now</a>
+          </div>
 
-<!-- WHY CHOOSE -->
-<section id="why">
-<div class="container">
-<h2 class="section-title">Why Choose Kwik Look</h2>
-<p class="section-sub">
-A sharper lens on home performance — without turning your inspection into an engineering report.
-</p>
+          <ul class="hero-points">
+            <li>ICA-certified inspector</li>
+            <li>Structural engineering background</li>
+            <li>Digital reports with high-resolution photos</li>
+            <li>Serving the San Francisco Bay Area</li>
+          </ul>
+        </div>
 
-<div class="grid three">
-<div class="card">
-<h3>Structural Awareness</h3>
-<p>Background in architectural/structural engineering provides deeper insight into framing, settlement patterns, and system performance.</p>
-</div>
-<div class="card">
-<h3>Bay Area Focus</h3>
-<p>Familiar with local housing stock, seismic considerations, and common South Bay construction details.</p>
-</div>
-<div class="card">
-<h3>Clear Communication</h3>
-<p>No scare tactics. No inflated language. Just clear findings and practical next steps.</p>
-</div>
-</div>
+        <aside class="quote-card" aria-label="Fast quote">
+          <p class="card-kicker">Fast Quote</p>
+          <h2>Need pricing or availability?</h2>
+          <p>Call or email with the property address, square footage, and preferred inspection date for a quick response.</p>
+          <div class="contact-list">
+            <a href="tel:+18315315665">(831) 531-5665</a>
+            <a href="mailto:info@kwiklookinspections.com">info@kwiklookinspections.com</a>
+          </div>
+          <p class="microcopy">Most reports are delivered within 24 hours of the inspection.</p>
+        </aside>
+      </div>
+    </section>
 
-<p class="small" style="margin-top:20px;">
-Home inspections are non-invasive visual evaluations and are not structural engineering services or code compliance inspections.
-</p>
-</div>
-</section>
+    <section class="trust-strip">
+      <div class="container trust-grid">
+        <div><strong>Thorough inspections</strong><span>Major systems and visible components</span></div>
+        <div><strong>Clear reporting</strong><span>High-resolution photos and plain-language findings</span></div>
+        <div><strong>Practical guidance</strong><span>Safety, major issues, and maintenance priorities</span></div>
+        <div><strong>Local service</strong><span>Proudly serving Bay Area buyers and homeowners</span></div>
+      </div>
+    </section>
 
-<!-- ABOUT -->
-<section id="about">
-<div class="container">
-<div class="card">
-<h2 class="section-title">About Jerome</h2>
-<p>
-Hi, I’m Jerome. I bring a background in Architectural Engineering and a strong understanding of building systems to every inspection.
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Services Overview</p>
+          <h2>Inspection services built around clarity and confidence</h2>
+          <p>Kwik Look Inspections currently focuses on residential property inspections, with additional service offerings planned as the business grows.</p>
+        </div>
 
-My focus is clarity — not fear. I evaluate accessible components, explain what matters most,
-and help you understand condition, risk, and next steps in plain language.
+        <div class="card-grid">
+          <article class="info-card">
+            <h3>Home Buyer Inspections</h3>
+            <p>Get a clearer picture of the property’s condition before closing so you can move forward informed.</p>
+          </article>
 
-Home inspections are visual evaluations — not engineering reports —
-but my technical background allows me to recognize patterns and conditions that deserve attention.
-</p>
-</div>
-</div>
-</section>
+          <article class="info-card">
+            <h3>Homeowner Inspections</h3>
+            <p>Stay ahead of maintenance and better understand aging systems, wear, and visible defects.</p>
+          </article>
 
-<!-- CONTACT -->
-<section id="contact">
-<div class="container">
-<h2 class="section-title">Request Booking</h2>
-<p class="section-sub">Call or text for availability and pricing.</p>
-<div class="card">
-<p><strong>Phone/Text:</strong> (408) 555-1234</p>
-<p><strong>Email:</strong> hello@yourdomain.com</p>
-<p><strong>Service Area:</strong> San Jose, Santa Clara, Sunnyvale, Mountain View, Cupertino and surrounding areas.</p>
-</div>
-</div>
-</section>
+          <article class="info-card">
+            <h3>Future Expanded Services</h3>
+            <p>Pre-listing, multi-unit, commercial, and specialty inspection services can be added as the business grows.</p>
+          </article>
+        </div>
 
-<footer>
-<div class="container">
-Engineering-informed inspections for confident Bay Area home decisions.
-<br><br>
-© 2026 Kwik Look Home Inspections
-</div>
-</footer>
+        <div class="section-actions">
+          <a class="btn btn-primary" href="services.html">View Services</a>
+        </div>
+      </div>
+    </section>
 
-</main>
+    <section class="section alt">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">How It Works</p>
+          <h2>A simple process designed to keep you informed</h2>
+        </div>
+
+        <div class="steps-grid">
+          <article class="step-card">
+            <span class="step-number">1</span>
+            <h3>Schedule</h3>
+            <p>Reach out by phone or email with the property information and preferred timeline.</p>
+          </article>
+
+          <article class="step-card">
+            <span class="step-number">2</span>
+            <h3>Inspect</h3>
+            <p>The property’s major systems and visible components are evaluated in a methodical on-site inspection.</p>
+          </article>
+
+          <article class="step-card">
+            <span class="step-number">3</span>
+            <h3>Review Your Report</h3>
+            <p>You receive a digital report with photos, observations, and practical next-step guidance.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split-layout">
+        <div>
+          <p class="eyebrow">Why Choose Kwik Look</p>
+          <h2>Professional, objective inspections without alarmist language</h2>
+          <p>Kwik Look Inspections was founded to provide thorough and reliable property inspections throughout the Bay Area. The goal is simple: provide clear information so clients can move forward with confidence.</p>
+        </div>
+
+        <div class="feature-stack">
+          <article class="feature-card">
+            <h3>Engineering-Informed Perspective</h3>
+            <p>Jerome Jackson completed the 60-hour Real Estate Inspection Certification Program through Inspection Certification Associates and brings a structural engineering background to the inspection process.</p>
+          </article>
+
+          <article class="feature-card">
+            <h3>Clear Communication</h3>
+            <p>Findings are presented in plain language with context, so clients can understand what matters now and what to plan for later.</p>
+          </article>
+
+          <article class="feature-card">
+            <h3>Fast Digital Reporting</h3>
+            <p>Most reports are delivered within 24 hours with high-resolution photos and practical observations.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container cta-box">
+        <div>
+          <p class="eyebrow">Request an Inspection</p>
+          <h2>Get clear information before you move forward</h2>
+          <p>Call or email today to ask about availability, pricing, and next steps for your inspection.</p>
+        </div>
+
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="tel:+18315315665">Call (831) 531-5665</a>
+          <a class="btn btn-secondary" href="contact.html">Contact Us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <img class="footer-logo" src="assets/kwiklook-logo.jpg" alt="Kwik Look Inspections logo" />
+        <p>Professional property inspections for buyers, homeowners, and real estate professionals throughout the San Francisco Bay Area.</p>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="tel:+18315315665">(831) 531-5665</a></li>
+          <li><a href="mailto:info@kwiklookinspections.com">info@kwiklookinspections.com</a></li>
+          <li><a href="https://kwiklookinspections.com/">kwiklookinspections.com</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Pages</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 Kwik Look Inspections. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <a class="mobile-sticky-cta" href="tel:+18315315665">Call Now</a>
+  <script src="script.js"></script>
 </body>
 </html>
