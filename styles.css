@@ -151,7 +151,9 @@ ul {
 
 .btn-primary:hover,
 .btn-primary:focus-visible {
-  background: var(--green-dark);
+  background: var(--green-dark)
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(63,139,59,.35);;
 }
 
 .btn-secondary {
@@ -452,10 +454,8 @@ h3 {
 }
 
 .footer-logo {
-  width: 220px;
+  width: 320px;
   margin-bottom: 1rem;
-  background: #fff;
-  border-radius: 12px;
   padding: 0.35rem;
 }
 
