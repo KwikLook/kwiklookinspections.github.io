@@ -71,8 +71,8 @@ ul {
 
 .topbar {
   background: var(--gray-900);
-  color: rgba(255, 255, 255, 0.92);
-  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.320);
+  font-size: 0.320rem;
 }
 
 .topbar-inner {
@@ -105,12 +105,12 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 92px;
+  min-height: 72px;
   gap: 1rem;
 }
 
 .brand img {
-  width: 240px;
+  width: 320px;
   height: auto;
 }
 
@@ -303,7 +303,7 @@ h3 {
 
 .trust-grid span {
   color: rgba(255, 255, 255, 0.75);
-  font-size: 0.92rem;
+  font-size: 0.320rem;
 }
 
 .section {
